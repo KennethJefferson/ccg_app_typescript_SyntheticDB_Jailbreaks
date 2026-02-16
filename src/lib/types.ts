@@ -5,7 +5,8 @@ export type AttackCategory =
   | "multi_turn"
   | "prompt_injection"
   | "social_engineering"
-  | "few_shot_manipulation";
+  | "few_shot_manipulation"
+  | "godmode_compliance";
 
 export type DifficultyLevel = "basic" | "intermediate" | "advanced" | "expert";
 

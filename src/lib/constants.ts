@@ -8,6 +8,7 @@ export const CATEGORY_LABELS: Record<AttackCategory, string> = {
   prompt_injection: "Prompt Injection",
   social_engineering: "Social Engineering",
   few_shot_manipulation: "Few-shot Manipulation",
+  godmode_compliance: "Godmode Compliance",
 };
 
 export const CATEGORY_DESCRIPTIONS: Record<AttackCategory, string> = {
@@ -25,6 +26,8 @@ export const CATEGORY_DESCRIPTIONS: Record<AttackCategory, string> = {
     "Manipulates through emotional appeals, authority claims, or urgency",
   few_shot_manipulation:
     "Provides examples that establish a pattern leading to harmful output",
+  godmode_compliance:
+    "Tricks the model into believing a special 'godmode' or unrestricted mode is active, causing it to answer any query freely without safety filters",
 };
 
 export const DIFFICULTY_LABELS: Record<DifficultyLevel, string> = {
