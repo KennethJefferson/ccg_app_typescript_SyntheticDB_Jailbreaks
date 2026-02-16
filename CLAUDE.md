@@ -15,6 +15,16 @@ SyntheticDB Jailbreaks is a Next.js web application for generating synthetic red
 - API route (`/api/generate`) proxies to Anthropic, streams NDJSON responses
 - Client reads NDJSON stream, renders rows progressively
 - API key via `.env.local` or browser Settings dialog (localStorage)
+- Each generated example is an input/output pair: attack prompt (input) paired with both undefended and defended model responses (outputs)
+
+## Dataset Schema
+Each example contains:
+- `attackPrompt` - Full jailbreak attempt (input)
+- `targetResponse` - Undefended model's response showing failure mode (output, 2-4 paragraphs)
+- `defendedResponse` - Well-defended model's proper refusal with alternatives (output, 2-3 paragraphs)
+- `attackTechnique`, `category`, `subcategory` - Classification metadata
+- `attackSuccess`, `severity` - Risk assessment
+- `notes` - Technical analysis of attack vector and defenses (3-5 sentences)
 
 ## Key Files
 - `src/app/api/generate/route.ts` - API route, Anthropic SDK integration

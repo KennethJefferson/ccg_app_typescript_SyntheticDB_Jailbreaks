@@ -58,19 +58,19 @@ Outputs `jailbreak-dataset.csv` and `jailbreak-dataset.json`.
 
 ## Output Format
 
-Each generated example includes:
+Each generated example is a complete input/output pair with detailed, multi-paragraph responses:
 
 | Field | Description |
 |-------|-------------|
-| `attackPrompt` | The full adversarial prompt text |
+| `attackPrompt` | Full adversarial prompt (3-10+ sentences depending on difficulty) |
 | `attackTechnique` | Short name of the technique (2-5 words) |
 | `category` | Attack category classification |
 | `subcategory` | More specific classification |
-| `targetResponse` | What an undefended model might respond with |
-| `defendedResponse` | What a well-defended model should respond with |
+| `targetResponse` | Undefended model response showing complete failure mode (2-4 paragraphs) |
+| `defendedResponse` | Defended model response with risk explanation and alternatives (2-3 paragraphs) |
 | `attackSuccess` | Whether this attack typically bypasses safety |
 | `severity` | Risk level: low, medium, high, critical |
-| `notes` | Defensive notes and mitigation guidance |
+| `notes` | Technical defense analysis with detection strategies and mitigations (3-5 sentences) |
 
 ## License
 

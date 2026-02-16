@@ -58,7 +58,11 @@ Navigate to http://localhost:3000.
 ### Viewing Results
 
 - Rows appear in the data table as they stream in
-- Click any row to expand and see full details (attack prompt, undefended response, defended response, notes)
+- Click any row to expand and see full details:
+  - **Attack Prompt** - Complete jailbreak input (multi-sentence)
+  - **Undefended Response** - Multi-paragraph output showing the full failure mode
+  - **Defended Response** - Multi-paragraph proper refusal with risk explanation and alternatives
+  - **Defensive Notes** - Technical analysis of attack vector, detection strategies, mitigations
 - Use the filter bar to narrow by category, severity, or attack success
 - Use the search box to find specific techniques or keywords
 
@@ -102,11 +106,11 @@ Each example makes one API call to Claude Sonnet 4. Approximate costs:
 
 | Examples | Estimated Cost |
 |----------|---------------|
-| 10 | ~$0.03-0.05 |
-| 50 | ~$0.15-0.25 |
-| 100 | ~$0.30-0.50 |
+| 10 | ~$0.10-0.20 |
+| 50 | ~$0.50-1.00 |
+| 100 | ~$1.00-2.00 |
 
-Costs vary based on prompt complexity and response length.
+Costs vary based on prompt complexity and response length. With detailed multi-paragraph outputs (up to 4096 tokens per example), costs are higher than minimal-response configurations.
 
 ## Troubleshooting
 
